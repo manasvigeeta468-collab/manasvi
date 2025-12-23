@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+    body{
+        width: 300px;
+        background-color: cornsilk;
+        padding: 20px;
+        margin: 100px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gainsboro;
+    }
+    input ,button{
+        width: 100px;
+        padding: 6px;
+        margin: 5px 0;
+
+    }
+    #out{
+        margin: 10px;
+        color: black;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+function calculate(){
+    var a = parseInt(document.getElementById("a").value);
+    var b = parseInt(document.getElementById("b").value);
+
+    var sum = a + b;
+    var sub = a - b;
+    var mul = a * b;
+    var div = a / b;
+
+    document.getElementById("res").value = sum;
+    document.getElementById("out").innerHTML =
+        "Sum = " + sum + "<br>" +
+        "Sub = " + sub + "<br>" +
+        "Mul = " + mul + "<br>" +
+        "Div = " + div;
+}
+</script>
+</head>
+
+<body>
+
+A : <input type="text" id="a"><br><br>
+B : <input type="text" id="b"><br><br>
+
+<input type="button" value="Calculate" onclick="calculate()"><br><br>
+
+Result :
+<input type="text" id="res"><br><br>
+
+<div id="out"></div>
+
+</body>
+</html>
